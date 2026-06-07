@@ -63,3 +63,54 @@ def most_spoken_lang(filename,n):
 
 print(most_spoken_lang(filename="countries_data.json", n=5))
 
+'''
+3. Read the countries_data.json data file in data directory, create a function that creates a list of the ten most populated countries
+
+# Your output should look like this
+print(most_populated_countries(filename='./data/countries_data.json', 10))
+
+[
+{'country': 'China', 'population': 1377422166},
+{'country': 'India', 'population': 1295210000},
+{'country': 'United States of America', 'population': 323947000},
+{'country': 'Indonesia', 'population': 258705000},
+{'country': 'Brazil', 'population': 206135893},
+{'country': 'Pakistan', 'population': 194125062},
+{'country': 'Nigeria', 'population': 186988000},
+{'country': 'Bangladesh', 'population': 161006790},
+{'country': 'Russian Federation', 'population': 146599183},
+{'country': 'Japan', 'population': 126960000}
+]
+
+# Your output should look like this
+
+print(most_populated_countries(filename='./data/countries_data.json', 3))
+[
+{'country': 'China', 'population': 1377422166},
+{'country': 'India', 'population': 1295210000},
+{'country': 'United States of America', 'population': 323947000}
+]
+'''
+
+def most_populated_countries(filename):
+    with open(filename, encoding="utf-8") as f:
+        countries = json.load(f)
+        population_list = []
+        ed = {}
+        for country in countries:
+            ed["name"] = countries[:3]
+            ed["population"] = country["population"]
+        population_list.append(ed)
+        print(ed)
+            
+
+        
+#         c_p = {}
+#         for country in countries:
+#             for population in country["population"]:
+#                 c_p[population] = c_p.get(population, 0) + 1
+#         s = c_p.items()
+#         ss = sorted(s, key=lambda x: x[1], reverse=True)
+#         return ss[:10]
+# print(most_populated_countries(filename="countries_data.json", n=10))
+most_populated_countries(filename="countries_data.json")
