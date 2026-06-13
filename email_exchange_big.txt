@@ -1,0 +1,37 @@
+From: john.smith@gmail.com
+To: sarah_williams@yahoo.com
+
+Hello Sarah,
+
+Please send the report to manager@company.org before Friday.
+
+CC:
+alex.khan123@hotmail.com
+support@amazon.com
+hr@openai.com
+
+Thanks,
+John
+
+----------------------------------
+
+From: marketing@startup.io
+To: customer.service@outlook.com
+
+For inquiries contact:
+sales@startup.io
+info@startup.io
+helpdesk@startup.io
+
+----------------------------------
+
+Random text here.
+
+My email is ayyu.dev@gmail.com.
+Contact my friend at python_learner2026@proton.me.
+
+Do not send anything to fake-email.com
+
+You may also reach us at:
+admin@university.edu
+registrar.office@college.ac.in
