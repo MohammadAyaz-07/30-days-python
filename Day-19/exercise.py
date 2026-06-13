@@ -92,25 +92,16 @@ print(most_populated_countries(filename='./data/countries_data.json', 3))
 ]
 '''
 
-def most_populated_countries(filename):
+def most_populated_countries(filename, n):
     with open(filename, encoding="utf-8") as f:
         countries = json.load(f)
         population_list = []
-        ed = {}
         for country in countries:
-            ed["name"] = countries[:3]
-            ed["population"] = country["population"]
-        population_list.append(ed)
-        print(ed)
-            
-
-        
-#         c_p = {}
-#         for country in countries:
-#             for population in country["population"]:
-#                 c_p[population] = c_p.get(population, 0) + 1
-#         s = c_p.items()
-#         ss = sorted(s, key=lambda x: x[1], reverse=True)
-#         return ss[:10]
-# print(most_populated_countries(filename="countries_data.json", n=10))
-most_populated_countries(filename="countries_data.json")
+            c = country["name"]
+            p = country["population"]
+            ed = {"country": c, "population": p}
+            #now we have to take only the top 10 countries with the highest population
+            population_list.append(ed)
+        sorted_ed = sorted(population_list, key=lambda x: x["population"], reverse=True)
+        return sorted_ed[:n]
+print(most_populated_countries(filename="countries_data.json", n=10))
